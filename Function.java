@@ -34,11 +34,10 @@ public class Function extends Display {
         }
     }
     
-    //print the main menu every time the user press key
     public void ReloaderMenu() {
         switch (LowerInput) {
             case 'w':
-            	//check it arrow is not out of bound
+                // Check if arrow is not out of bounds
                 if (arrow == 0) {
                     KeyinputMenu();
                 } else {
@@ -47,7 +46,7 @@ public class Function extends Display {
                 }
                 break;
             case 's':
-            	//check if arrow is not out of bound
+                // Check if arrow is not out of bounds
                 if (arrow == 2) {
                     KeyinputMenu();
                 } else {
@@ -56,17 +55,17 @@ public class Function extends Display {
                 }
                 break;
             case 'y':
-            	//check if user choose Make reservation
+                // Make reservation, view reservations, or exit
                 if (arrow == 0) {
-                    // Make reservation using the abstract Reservation class
+                	 // Create a new reservation
                     MakeReservation reservation = new MakeReservation();
-                    boolean isSaved = reservation.makeReservation();
+                    reservation.gatherReservationDetails(); // Gather reservation details
+                    boolean isSaved = reservation.confirmReservation(); // Confirm and check if the reservation is saved
                     if (!isSaved) {
-                        KeyinputMenu();//go back Main Menu
-                    }else {
-                    	KeyinputMenu();//go back Main menu
+                        KeyinputMenu(); // Go back to the main menu
+                    } else {
+                        KeyinputMenu(); // Go back to the main menu
                     }
-                
                 } else if (arrow == 1) {
                     KeyInputView(); // View all reservations
                 } else if (arrow == 2) {
@@ -75,7 +74,7 @@ public class Function extends Display {
                 break;
         }
     }
-}
+ }
 
 
 

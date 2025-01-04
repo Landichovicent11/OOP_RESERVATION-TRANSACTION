@@ -12,5 +12,6 @@ public abstract class Reservation {
     public abstract boolean confirmReservation();
     public abstract void saveReservation();
     public abstract String mergeNames();  // Merge first and last names with proper capitalization
+
 }
 
