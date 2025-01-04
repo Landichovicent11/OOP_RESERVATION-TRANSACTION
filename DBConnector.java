@@ -8,6 +8,7 @@ public class DBConnector {
     private String url = "jdbc:mysql://localhost:3306/Restaurant_Reservation";
     private String user = "root";
     private String password = "111104";
+    
     Connection con;
     Statement stmt;
     private String query;

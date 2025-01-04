@@ -24,6 +24,8 @@ public class Function extends Display {
     }
 //check if user press Enter
     public void KeyInputView() {
+    	
+    	DisplayView();
         input = Input.nextLine();
 
         if (input.isEmpty()) {
